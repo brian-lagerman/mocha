@@ -118,12 +118,12 @@ describe('--watch', function() {
         }
       );
 
-      return sleep(2000)
+      return sleep(1000)
         .then(() => {
           touchFile(gitFile);
           touchFile(nodeModulesFile);
         })
-        .then(() => sleep(2000))
+        .then(() => sleep(1000))
         .then(() => {
           mocha.kill('SIGINT');
           return outputPromise;
